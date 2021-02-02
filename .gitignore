@@ -1,0 +1,5 @@
+node_modules
+/style-guide-template/.DS_Store
+*.css
+.cache
+build
