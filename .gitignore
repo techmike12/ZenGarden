@@ -1,5 +1,5 @@
-/style-guide-template/.DS_Store
-/style-guide-template/node_modules
+.DS_Store
+node_modules
 *.css
 .cache
 build
