@@ -1,14 +1,16 @@
+/*
+*  Design Team
+*  Janette Kaymak
+*  Michael Kendall
+*  Donivan Killpack
+*/
+
 @import 'partials/reset';
 @import 'partials/prefix-mixins';
 @import 'partials/layout'; // responsive grid and media queries
 
 // color palette - these colors will be the color swatches of the Colors section
-
-$color-1: #5f8ee4; // Cornflower Blue - Action color
-$color-2: #19191a; // Dark Blue
-$color-3: #e4655f; // Red
-$color-4: #e6e6e6; // light grey
-$color-5: #ffffff; // white
+@import 'partials/colors';
 
 // additional colors
 
@@ -16,13 +18,12 @@ $success: #6fce72; // green
 $alert: $color-3; // red
 
 // fonts
-$primary-font: 'Merriweather', serif;
-$secondary-font: 'Open Sans', sans-serif;
+//$primary-font: cursive, serif;
+//$secondary-font: Arial, Helvetica, sans-serif;
+@import 'partials/typography';
 
 /* -------------------------------- 
-
 xBackground 
-
 -------------------------------- */
 
 body {
@@ -31,9 +32,7 @@ body {
 }
 
 /* -------------------------------- 
-
 xPatterns
-
 -------------------------------- */
 
 .cd-box {
@@ -46,9 +45,7 @@ xPatterns
 }
 
 /* -------------------------------- 
-
 xNavigation 
-
 -------------------------------- */
 
 header {
@@ -132,10 +129,14 @@ header {
   }
 }
 
+@import 'partials/navigation';
+
+
+
+
+
 /* -------------------------------- 
-
 xPage title 
-
 -------------------------------- */
 
 main > h1 {
@@ -147,10 +148,9 @@ main > h1 {
   }
 }
 
+
 /* -------------------------------- 
-
 xTypography 
-
 -------------------------------- */
 
 h1,
@@ -207,9 +207,7 @@ p {
 }
 
 /* -------------------------------- 
-
 xButtons 
-
 -------------------------------- */
 
 .btn {
@@ -220,7 +218,7 @@ xButtons
     size: 1.4rem;
     family: $secondary-font;
   }
-  color: $color-5;
+  color: $color-2;
   padding: 0.6em 2.2em;
   cursor: pointer;
   background: $color-1;
@@ -250,9 +248,9 @@ xButtons
   }
 
   &.btn-outline {
-    color: $color-1;
+    color: $color-2;
     background: transparent;
-    box-shadow: inset 0 0 0 1px $color-1;
+    box-shadow: inset 0 0 0 1px $color-2;
 
     .no-touch &:hover {
       color: $color-5;
@@ -271,9 +269,7 @@ xButtons
 }
 
 /* -------------------------------- 
-
 xIcons 
-
 -------------------------------- */
 
 .cd-icons li {
@@ -283,9 +279,7 @@ xIcons
 }
 
 /* -------------------------------- 
-
 xForm 
-
 -------------------------------- */
 
 input[type='text'],
