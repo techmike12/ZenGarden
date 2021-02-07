@@ -3,18 +3,62 @@
 
 body {
     background-color: darkseagreen;
-    background-image: url(https://janettekaymak.github.io/zen-garden/zen-template/images/grass2.png), linear-gradient(purple, rgb(123, 212, 247), white, lemonchiffon, darkseagreen, darkseagreen, darkseagreen, lemonchiffon, white, rgb(123, 212, 247), purple);
+    background-image: url(https://janettekaymak.github.io/zen-template/images/grass2.png), linear-gradient(purple, rgb(123, 212, 247), white, lemonchiffon, darkseagreen, darkseagreen, darkseagreen, lemonchiffon, white, rgb(123, 212, 247), purple, purple);
 }
 
 div.page-wrapper {
     max-width: 360px;
 }
-#dragon, #dragonright{
-    display:none;
+
+/*#dragonright
+#dragonleft {
+    display: none;
+}*/
+
+#dragonleft {
+    display: inline;
+    position: absolute;
+    width: 140px;
+}
+
+#dragonright {
+    display: inline;
+    position: absolute;
+    width: 140px;
+}
+
+#dragonleft {
+    animation: myfirst 8s linear 1s infinite alternate;
+}
+
+@keyframes myfirst {
+    0% {
+        left:120%; top:0px;
+    }
+
+    100% {
+        left:-500px; top:0px;
+    }
+}
+
+#dragonright {
+    animation: mysecond 4s linear 1s infinite alternate;
+}
+
+@keyframes mysecond {
+    0% {
+        left:-500px; top:0px;
+    }
+
+    100% {
+        left:120%; top:0px;
+    }
 }
 
 #banner {
-    max-width: 100%;
+    max-width: 110%;
+    margin-top: -8px;
+    margin-left: -8px;
 }
 
 p.link {
@@ -27,6 +71,19 @@ p.link:nth-child(2) {
     margin-top: 10px;
     margin-bottom: -90px;
 }
+p.link:nth-child(1) {
+    position: relative;
+    animation-name: link;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  @keyframes link {
+    0%   { left:-120px; top:0px;}
+    100%  { left:100px; top:0px;}
+  }
 
 section h1,
 section h2 {
@@ -56,9 +113,14 @@ header::after {
 }
 
 h3 {
-    font-family: 'Merienda, cursive;
+    font-family: 'Merienda'cursive;
     margin-bottom: -10px;
     text-align: center;
+}
+
+#block1 {
+    width: 360px;
+    margin-left: -6px;
 }
 
 .preamble {
@@ -69,7 +131,7 @@ h3 {
     text-align: justify;
     position: absolute;
     margin-top: -580px;
-    margin-left: 78px;
+    margin-left: 72px;
     line-height: 1em;
 }
 
@@ -79,7 +141,6 @@ p {
 
 div.preamble h3 {
     font-family: 'Merienda', cursive;
-    opacity: 1;
     font-size: 25px;
     line-height: 1.2em;
 }
@@ -90,31 +151,17 @@ div.preamble h3 {
     margin-left: 40px;
 }
 
-#block1 {
-    width: 360px;
-    margin-left: 0px;
-}
-
 #cover1 {
     display: block;
     width: 352px;
     position: absolute;
     margin-top: -615px;
-    margin-left: 20px;
+    margin-left: 14px;
 
-}
-
-#cover1:hover,
-#cover2:hover,
-#cover3:hover,
-#cover4:hover,
-#cover5:hover {
-    opacity: 0;
-    transition: 1.5s;
 }
 
 #block2 {
-    margin-left: 20px;
+    margin-left: -6px;
     width: 360px;
     margin-top: -60px;
 }
@@ -126,7 +173,7 @@ div.preamble h3 {
     width: 241px;
     position: absolute;
     margin-top: -685px;
-    margin-left: 60px;
+    margin-left: 34px;
     line-height: 1em;
 }
 
@@ -179,6 +226,7 @@ div.participation h3 {
 
 #block4 {
     margin-top: -27px;
+    margin-left: -6px;
 }
 
 div.benefits {
@@ -187,7 +235,7 @@ div.benefits {
     width: 220px;
     font-size: 16px;
     margin-top: -300px;
-    margin-left: 70px;
+    margin-left: 64px;
     text-align: center;
 }
 
@@ -202,11 +250,13 @@ div.benefits h3 {
     display: block;
     position: absolute;
     margin-top: -329px;
+    margin-left: -6px;
 }
 
 #block5 {
     margin-top: -25px;
-    margin-bottom: -110px;
+    margin-bottom: -90px;
+    margin-left: -8px;
 
 }
 
@@ -217,14 +267,13 @@ div.requirements {
     width: 255px;
     font-size: 17px;
     line-height: 1em;
-    margin-top: -915px;
-    margin-left: 70px;
+    margin-top: -935px;
+    margin-left: 62px;
     text-align: justify;
 }
 
 div.requirements h3 {
     font-family: 'Merienda', cursive;
-    opacity: 1;
     font-size: 25px;
     line-height: 1em;
 }
@@ -240,8 +289,17 @@ div.requirements h3 {
     display: block;
     width: 275px;
     position: absolute;
-    margin-top: -900px;
-    margin-left: 60px;
+    margin-top: -918px;
+    margin-left: 52px;
+}
+
+#cover1:hover,
+#cover2:hover,
+#cover3:hover,
+#cover4:hover,
+#cover5:hover {
+    opacity: 0;
+    transition: 1.5s;
 }
 
 button {
@@ -262,13 +320,13 @@ aside.sidebar {
     color: white;
     line-height: 1.3em;
     max-width: 300px;
-    background-image: url(https://janettekaymak.github.io/zen-garden/zen-template/images/bricks2.png);
+    background-image: url(https://janettekaymak.github.io/zen-template/images/bricks2.png);
     background-color: hsl(342, 100%, 25%, .7);
     background-position: center;
     background-size: contain;
     border-radius: 25px;
     margin-top: 24px;
-    margin-left: 20px;
+    margin-left: 0px;
 
 }
 
@@ -312,5 +370,21 @@ p.zelda:nth-child(1) {
 }
 
 p.zelda:nth-child(3) {
-    margin-bottom: 50px;
+    margin-bottom: 250px;
+    margin-left: 0px;
 }
+
+p.zelda:nth-child(3) {
+    position: relative;
+    animation-name: zelda;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  @keyframes zelda {
+    0%   { left:-10px; top:0px;}
+    100% { left:100px; top:0px;}
+  }
+  
