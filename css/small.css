@@ -10,11 +10,6 @@ div.page-wrapper {
     max-width: 360px;
 }
 
-/*#dragonright
-#dragonleft {
-    display: none;
-}*/
-
 #dragonleft {
     display: inline;
     position: absolute;
@@ -47,11 +42,11 @@ div.page-wrapper {
 
 @keyframes mysecond {
     0% {
-        left:-500px; top:0px;
+        right:-500px; top:0px;
     }
 
     100% {
-        left:120%; top:0px;
+        right:120%; top:0px;
     }
 }
 
@@ -313,7 +308,7 @@ button {
 }
 
 /*The following images were obtained free from Klipartz,
-then it was changed so as not to mimic Zelda #dude and #tilt-dude, #zelda, #wave */
+then it was changed so as not to mimic Zelda #dude and #tilt-dude, #zelda, #dog */
 
 aside.sidebar {
     padding: 30px;
