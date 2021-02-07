@@ -1,22 +1,18 @@
 @media screen and (min-width: 730px) {
 
-    #dragon{
-        display: inline;
-        position:absolute;
-        margin: -10px auto auto 58%;
-        width: 300px; 
-       
+    #dragonright {
+        width: 300px;
     }
-    #dragonright{
-        display: inline;
-        position:absolute;
-        margin: -10px auto auto 3%;
-        width: 300px; 
-       
+
+    #dragonleft {
+        width: 300px;
     }
+
     #banner {
         display: block;
         margin: auto;
+        max-width: 100%;
+        margin-top: -8px;
     }
 
     .page-wrapper {
@@ -34,7 +30,6 @@
     section h2 {
         text-align: left;
         margin-left: 60px;
-
     }
 
     header::after {
@@ -45,11 +40,10 @@
     p.link {
         margin-left: 300px;
         margin-top: 10px;
-
     }
 
     p.link:nth-child(2) {
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 
     #block1 {
@@ -123,19 +117,19 @@
 
     #block5 {
         margin-top: 10px;
-        margin-left: 360px;
+        margin-left: 380px;
     }
 
     div.requirements {
-        margin-top: -920px;
-        margin-left: 430px;
+        margin-top: -935px;
+        margin-left: 450px;
         text-align: justify;
         line-height: 1em;
     }
 
     #cover5 {
-        margin-top: -898px;
-        margin-left: 420px;
+        margin-top: -918px;
+        margin-left: 440px;
     }
 
     aside.sidebar {
@@ -145,30 +139,16 @@
     }
 
     p.zelda:nth-child(1) {
-        margin-top: 30px;
+        margin-top: 20px;
     }
 }
-@media screen and (min-width: 950px){
-    #dragon{
-        margin: -10px 0 0 67%;
-        width: 380px; 
-       
+
+@media screen and (min-width: 950px) {
+    #dragonright {
+        width: 380px;
     }
-    #dragonright{
-        margin: -10px auto auto auto;
-        width: 380px; 
-       
-    }
-}
-@media screen and (min-width: 1200px){
-    #dragon{
-        margin: -10px 0 0 71%;
-       
-    }
-}
-@media screen and (min-width: 1500px){
-    #dragon{
-        margin: -10px 0 0 81%;
-       
+
+    #dragonleft {
+        width: 380px;
     }
 }
