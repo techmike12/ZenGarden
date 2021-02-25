@@ -1,0 +1,269 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+/* basic elements */
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+
+$barlowFont:'Barlow Condensed', 'Arial Narrow', sans-serif;
+$meriendaFont: 'Merienda', cursive;
+
+@mixin extraHover {
+  opacity: 0;
+	transition: 1.5s;
+  background-color: black;
+}
+
+@mixin h1and2{
+  font-family: $meriendaFont;
+	line-height: .25em;
+	color: purple;
+}
+
+body {
+	background-color: rgb(215, 235, 192);
+}
+
+header{
+  &::before {
+    content: url(./images/linkAttack150.png);
+  }
+}
+
+h1 {
+  @include h1and2();
+	font-size: 42px;
+	margin-top: 120px;
+	margin-bottom: 35px;
+}
+
+h2 {
+  @include h1and2();
+	font-size: 20px;
+}
+
+h3 {
+	font-family: $meriendaFont;
+	margin-bottom: -10px;
+	text-align: center;
+}
+
+.summary {
+	font-family: $barlowFont;
+  &::after{
+    content: "Click on each block to reveal a hidden message!";
+    font-family: $barlowFont;
+  
+  }
+}
+
+.preamble {
+	font-family: $barlowFont;
+	font-size: 17.5px;
+	color: white;
+	width: 235px;
+	text-align: justify;
+	line-height: 1.1em;
+  &::before{
+    content: url(./svg/block1.svg);
+  }
+  h3{
+    font-family: $meriendaFont;
+    font-size: 25px;
+    line-height: 1.2em;
+  }
+  p{
+    &:nth-child(4) {
+      width: 160px;
+      text-align: justify;
+      margin-left: 40px;
+    }
+  }
+}
+
+.explanation {
+	text-align: justify;
+	font-family: $barlowFont;
+	font-size: 17px;
+	width: 241px;
+	line-height: 1.11em;
+  &::before {
+    content: url(./svg/block2.svg);
+  }
+  p{
+    &:nth-child(3){
+      width: 160px;
+    }
+  }
+  h3{
+    font-family: $meriendaFont;
+    font-size: 21px;
+    line-height: 1em;
+  }
+}
+
+.participation {
+  &::before {
+    content: url(./svg/block3.svg);
+  }
+	color: white;
+	font-family: $barlowFont;
+	text-align: justify;
+	width: 250px;
+	font-size: 16px;
+  h3{
+    font-size: 26px;
+    line-height: 1em;
+    font-family: $meriendaFont;
+  }
+}
+
+.benefits {
+  &::before {
+    content: url(./svg/block4.svg);
+  }
+	font-family: $barlowFont;
+	width: 220px;
+	font-size: 16.5px;
+	text-align: center;
+	text-shadow: white 1px 1px 2px;
+  h3 {
+    font-family: $meriendaFont;
+    font-size: 30px;
+    line-height: 1em;
+  }
+}
+
+.requirements {
+  &::before {
+    content: url(./svg/block5.svg);
+  }
+	font-family: $barlowFont;
+	width: 250px;
+	font-size: 16.5px;
+	line-height: 1.05em;
+	text-align: justify;
+	text-shadow: white 1px 1px 2px;
+  h3 {
+    font-family: $meriendaFont;
+    font-size: 25px;
+    line-height: 1em;
+  }
+  p{
+    &:nth-child(5), &:nth-child(6){
+      width: 145px;
+      margin-left: 105px;
+      text-align: left;
+      margin-top: 15px;
+    }
+  }
+  &::after{
+    content: url(./svg/block6.svg);
+  }
+}
+
+aside{
+  .sidebar {
+    padding: 30px;
+    color: white;
+    width: 250px;
+    a{
+      &:link, &:visited{
+        color: white;
+        text-decoration: none;
+      }
+      &:hover{
+        color: purple;
+        text-shadow: white 1px 1px 1px;
+      }
+    }
+    h3 {
+      font-family: $meriendaFont;
+      font-size: 29px;
+      text-align: center;
+      color: purple;
+      background-color: rgb(248, 248, 255, .5);
+      padding: 5px;
+      border-radius: 5px;
+      line-height: .7em;
+    
+    }
+    ul{
+      li{
+        font-family: sans-serif;
+      }
+    }
+    &::after{
+      content: url(./images/zelda150.png);
+    }
+  }
+}
+
+@for $index from 1 to 6{
+  .extra#{$index}{
+    content: url(./svg/cover#{$index}.svg);
+    position: absolute;
+    &:hover{
+      @include extraHover();
+    }  
+  }
+}
+
+// .extra1 {
+// 	content: url(./svg/cover1.svg);
+// 	position: absolute;
+//   &:hover{
+//     @include extraHover();
+//   }
+// }
+
+// .extra2 {
+// 	content: url(./svg/cover2.svg);
+// 	position: absolute;
+//   &:hover{
+//     @include extraHover();
+//   }
+// }
+
+// .extra3 {
+// 	content: url(./images/cover3.png);
+// 	position: absolute;
+//   &:hover{
+//     @include extraHover();
+//   }
+// }
+
+// .extra4 {
+// 	content: url(./images/cover4.png);
+// 	position: absolute;
+//   &:hover{
+//     @include extraHover();
+//   }
+// }
+
+// .extra5 {
+// 	content: url(./svg/cover5.svg);
+// 	position: absolute;
+//   &:hover{
+//     @include extraHover();
+//   }
+// }
+
+// .extra6{
+// 	content: url(./svg/cover6.svg);
+// 	position:absolute;
+//   &:hover{
+//     @include extraHover();
+//   }
+// }
+
+
+
+
