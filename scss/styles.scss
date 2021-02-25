@@ -64,6 +64,10 @@ h3 {
   }
 }
 
+.page-wrapper {
+  display: grid;
+}
+
 .preamble {
 	font-family: $barlowFont;
 	font-size: 1em;
