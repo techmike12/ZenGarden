@@ -1,0 +1,40 @@
+
+.explanation::before{
+  content: url(./svg/bridge1.svg);
+  display:block;
+  margin: -220px auto auto 0px;
+  position: absolute;
+}
+
+.explanation h3 {
+font-family: $Font-H;
+font-size: 21px;
+line-height: 1em;
+margin-left: -45px;
+padding-top: 30px;
+padding-bottom: 10px;
+}
+
+.explanation {
+display: block;
+background-image: url(./svg/block2.svg);
+background-repeat: no-repeat;
+text-align: justify;
+font-family: $Font-p;
+font-size: 17px;
+width: $MobileWidth;
+height: 558px;
+line-height: 1.11em;
+margin: 0 auto 200px 12px;
+}
+
+.explanation p {
+width: 245px;
+display: block;
+padding: 0px 40px;
+margin-left: -7px;
+}
+
+.explanation p:nth-child(3) {
+width: 160px;
+}

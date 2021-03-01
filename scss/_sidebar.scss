@@ -1,0 +1,62 @@
+aside.sidebar {
+	position: absolute;
+	background-image: url(./svg/block6.svg);
+	background-repeat: no-repeat;
+	padding: 65px 30px;
+	width: 360px;
+	height: 700px;
+	display: block;
+	margin: 1150px auto 100px -32px;
+
+}
+
+aside.sidebar a:link,
+aside.sidebar a:visited {
+	color: $FontLight;
+	text-decoration: none;
+	text-shadow: $BGcolor4 1px 1px 1px;
+}
+
+li:hover {
+	background-color: $BGcolor5;
+	border-radius: 5px;
+	padding: 3px 10px;
+}
+
+aside.sidebar a:hover,
+aside.sidebar:hover {
+	color: $BGcolor3A;
+	font-family: $Font-p;
+	text-shadow: $BGcolor3 1px 1px 1px;
+}
+
+aside.sidebar h3 {
+	font-family: $Font-H;
+	font-size: 29px;
+	text-align: center;
+	color: $BGcolor3;
+	background-color: $BGcolor4;
+	padding: 5px;
+	border-radius: 5px;
+	line-height: .7em;
+	width: 240px;
+	margin-left: 48px;
+
+}
+
+aside.sidebar ul li {
+	font-family:$Font-p;
+	color: $FontLight;
+	width: 200px;
+	display: block;
+	margin-left: 30px;
+	font-size: 18px;
+
+}
+
+aside.sidebar::after {
+	content: url(./images/wave100.png);
+	position: absolute;
+	margin: 100px auto 0px 130px;
+	padding-bottom: 50px;
+}
