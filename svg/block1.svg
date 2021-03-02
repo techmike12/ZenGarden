@@ -1,4 +1,4 @@
-<svg width="360" height="560" xmlns="http://www.w3.org/2000/svg" id="block1">
+<svg  xmlns="http://www.w3.org/2000/svg" id="block1" viewBox='0 0 360 560'>
 	<defs>
 <!-- grey bricks -->
 		<pattern id="my3pattern" patternUnits="userSpaceOnUse" x="0" y="0" width="50" height="15">
