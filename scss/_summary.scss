@@ -1,162 +1,158 @@
-body {
-	background-color: $BGcolor1;
-	display: grid;
-	margin: -80px auto auto -10px;
-
-}
-
-header {
-	background-image: linear-gradient($BGcolor1, $BGcolor2, $BGcolor1);
-	height: 200px;
-	background-position: bottom;
-	background-repeat: repeat;
-	background-size: cover;
-	position: relative;
-	z-index: -1;
-}
-
-header::after {
-	content: url(./svg/smallLink.svg);
-	margin-left: 20px;
+aside.sidebar {
 	position: absolute;
-	margin-top: -20px;
+	background-image: url(./svg/block6.svg);
+	background-repeat: no-repeat;
+	padding: 20px 15px 15px 32px;
+	width: 360px;
+	height: 1200px;
+	display: block;
+	margin: 1010px auto auto 11px;
+	z-index: 1;
+
+}
+
+aside.sidebar a:link,
+aside.sidebar a:visited {
+	color: $FontLight;
+	text-decoration: none;
+	text-shadow: $BGcolor4 1px 1px 1px;
+}
+
+li:hover {
+	background-color: $BGcolor5;
+	border-radius: 5px;
+	padding: 3px 10px;
+}
+
+aside.sidebar a:hover,
+aside.sidebar:hover {
+	color: $BGcolor3A;
+	font-family: $Font-p;
+	text-shadow: $BGcolor3 1px 1px 1px;
+}
+
+aside.sidebar h3 {
+	font-family: $Font-H;
+	font-size: 29px;
+	text-align: center;
+	color: $BGcolor3;
+	background-color: $BGcolor4;
+	padding: 5px;
+	border-radius: 5px;
+	line-height: .7em;
+	width: 240px;
+	margin-left: 48px;
+}
+
+aside.sidebar ul li {
+	font-family: $Font-p;
+	color: $FontLight;
+	width: 200px;
+	display: block;
+	margin-left: 30px;
+	font-size: 18px;
+
+}
+
+footer {
+	display: none;
+}
+
+aside.sidebar::before {
+	content: url(./svg/together.svg);
+	position: absolute;
+	margin-top: 1290px;
+	margin-left: 0px;
 	z-index: 2;
 }
 
-h1,
-h2 {
-	width: $MobileWidth;
+aside.sidebar::after {
 	display: block;
-	margin: 0;
-	text-align: right;
-	line-height: .1em;
-	color: $BGcolor3A;
-}
-
-h1 {
-	font-size: 37px;
-	margin-top: 120px;
-	margin-bottom: 35px;
-	font-family: $Font-H;
-}
-
-h2 {
-	font-size: 20px;
+	content: "CONGRATULATIONS! YOU WON! . . . Now, go forth into the world and code your very own CSS Zen Garden! . . . This Zen Garden was created by Michael Kendall, Donivan Killpack and Janette Kaymak. All of the images are original Scalable Vector Graphics, lovingly hand-coded. Please do not use our artwork without permission © 2021";
 	font-family: $Font-p;
-}
-
-
-
-
-h3 {
-	font-family: $Font-H;
-	margin-bottom: -10px;
 	text-align: center;
-}
-
-.summary::after {
-	content: "CLICK or HOVER on each BLOCK to reveal a hidden message!";
-	font-family: $Font-p;
 	font-size: 22px;
-	color: $BGcolor3A;
+	color: $BGcolor6;
+	grid-area: world;
+	width: 350px;
+	height: 350px;
+	background-image: linear-gradient(#d2fcd2, darkturquoise, purple);
+	border-radius: 600px;
+	margin: 150px auto 0 -28px;
+	font-weight: bolder;
+
 }
 
-.summary {
-	padding: 0 75px 0 105px;
-	margin: auto 14px 0 10px;
-	text-align: right;
-	font-family: $Font-H;
-	line-height: 1.1em;
-	color: rgb(85, 84, 84);
-	margin-top: -60px;
-}
-
-.summary p a {
-	text-decoration: none;
-	font-family: $Font-p;
-	font-size: 20px;
-	color: $BGcolor3A;
+.extra6 {
+	content: url(./svg/pinkCastle.svg);
+	position: absolute;
+	margin-top: 5080px;
+	margin-left: 10px;
+	z-index: -1;
 }
 
 /*--------------------500----------------------*/
 
 @media screen and (min-width: $SmallRespWidth) {
 
-	body {
-		max-width: $SmallRespWidth;
-		margin: auto;
+	/* block6 */
+	aside.sidebar {
+		margin: 1010px auto 0px 125px;
+	}
+
+	/* link and zelda */
+	aside.sidebar::before {
+		margin-top: 1280px;
+		margin-left: -85px;
+	}
+
+	/* world */
+	aside.sidebar::after {
+		margin: 170px auto 0 -82px;
+		z-index: 3;
+		font-weight: normal;
 
 	}
 
-	header {
-		height: 150px;
-		margin-top: -50px;
+	/*castle*/
+	.extra6 {
+		z-index: 0;
+		margin-top: 4915px;
+		margin-left: -110px;
 	}
 
-	/* Link: */
-	header::after {
-		position: fixed;
-		margin-top: -60px;
-		margin-left: 10px;
-	}
-
-	h1,
-	h2 {
-		width: 470px;
-	}
-
-	.summary {
-		padding: 0 90px 0 120px;
-		line-height: 1.5em;
-	}
 }
 
 /*--------------------767----------------------*/
 
 @media screen and (min-width: $KindleWidth) {
 
-	body {
-		max-width: $KindleWidth;
-		margin: auto;
+	/* block6 */
+	aside.sidebar {
+		margin: 1010px auto 0px 180px;
 
 	}
 
-	header {
-		max-width: $KindleWidth;
-		height: 150px;
-		margin-top: -50px;
+	/*castle*/
+	.extra6 {
+		z-index: 0;
+		margin-top: 4870px;
+		margin-left: 23px;
 	}
 
-	h1,
-	h2 {
-		width: $KindleWidth;
-		text-align: center;
+	/* link and zelda */
+	aside.sidebar::before {
+		margin-top: 1285px;
+		margin-left: -5px;
 	}
 
-	h1 {
-		font-size: 45px;
-		line-height: 1em;
-	}
+	/* world */
+	aside.sidebar::after {
+		margin: 190px auto 0 -4px;
+		z-index: 3;
+		font-weight: normal;
 
-	.summary {
-		text-align: center;
-		padding: 0 160px;
 	}
-
-	h2::after {
-		content: url(./svg/littleZelda.svg);
-		position: fixed;
-		margin-top: -213px;
-		margin-left: 133px;
-	}
-
-	/* Link: */
-	header::after {
-		position: fixed;
-		margin-top: -60px;
-		margin-left: 57px;
-	}
-
 
 }
 
@@ -164,28 +160,39 @@ h3 {
 
 @media screen and (min-width: $LapTopWidth) {
 
-	body {
-		max-width: $LapTopWidth;
+	/* block6 */
+	aside.sidebar {
+		background-image: url(./svg/block6desk.svg);
+		background-repeat: no-repeat;
+		margin: -2430px auto 0px 670px;
+		z-index: 3;
+		padding: 210px 15px 15px 32px;
 
 	}
 
-	header {
-		max-width: $LapTopWidth;
+	/*castle*/
+	.extra6 {
+		content: url(./svg/pinkCastle-desk.svg);
+		z-index: 0;
+		margin-top: 2575px;
+		margin-left: 0px;
 	}
 
-	h1,
-	h2 {
-		width: $LapTopWidth;
-	}
-
-	/*zelda*/
-	h2::after {
-		margin-left: 405px;
-	}
-
-	/*link*/
-	header::after {
-		margin-left: 20px;
+	/* link and zelda */
+	aside.sidebar::before {
+		margin-top: 2792px;
+		margin-left: -270px;
 
 	}
+
+	/* world */
+	aside.sidebar::after {
+		margin: 1785px auto 0 -507px;
+		width: 330px;
+		height: 330px;
+		font-size: 21px;
+		font-weight: bolder;
+
+	}
+
 }
