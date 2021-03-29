@@ -41,7 +41,7 @@
     <rect width="262" height="272" x="24" y="24" fill="#f8d4f4" />
     <rect width="176" height="242" x="24" y="294" fill="#f8d4f4" />
     <rect width="99" height="125" x="199" y="354" fill="#f8d4f4" />
-    <rect width="50" height="500" x="310" y="0" fill="url(#treePattern)" />
+    <rect width="50" height="350" x="310" y="0" fill="url(#treePattern)" />
     <rect width="150" height="50" x="210" y="500" fill="url(#treePattern)" />
     <!--basin-->
     <rect width="80" height="80" x="206" y="215" rx="40" fill="url(#greyBricks)" stroke="black" />
